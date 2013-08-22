@@ -1,19 +1,20 @@
 {
-  "author": "Sascha Depold <sascha@depold.com> (http://depold.com)",
-  "name": "sequelize-performance",
-  "description": "Performance tests for sequelize",
+  "name": "node-orm-performance",
+  "description": "Performance tests for various node orm tools",
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sdepold/sequelize-performance.git"
+    "url": "https://github.com/tolgaek/node-orm-performance"
   },
   "engines": {
-    "node": "~0.6.2"
+    "node": "~0.10.0"
   },
   "dependencies": {
-    "mysql": "0.9.5",
-    "sequelize": "1.3.1",
-    "orm": "0.1.8-3"
+    "mysql": "2.0.x",
+    "sequelize": "2.0.x",
+    "orm": "2.1.0",
+    "jugglingdb": "~0.2.0",
+    "jugglingdb-mysql": "~0.0.1"
   },
   "devDependencies": {}
 }
