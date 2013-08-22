@@ -1,4 +1,6 @@
-var server = "mysql://root@localhost/performance_analysis_sequelize"
+var config = require("./config");
+
+var server = "mysql://" + config.user + "@localhost/" + config.database
   , orm    = require("orm")
   , LIMIT  = 10000
 

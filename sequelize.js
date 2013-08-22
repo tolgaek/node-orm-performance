@@ -1,8 +1,9 @@
-const Sequelize = require("sequelize")
+var Sequelize = require("sequelize")
+var config = require("./config");
 
-var LIMIT = 10000
+var LIMIT = 10000;
 
-var sequelize = new Sequelize('performance_analysis_sequelize', 'root', null, { logging: false })
+var sequelize = new Sequelize(config.database, config.user, null, { logging: false })
   , Entry     = sequelize.define('Entry', {
       number: Sequelize.INTEGER,
       string: Sequelize.STRING

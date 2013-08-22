@@ -1,10 +1,11 @@
-const persistence      = require('persistencejs/lib/persistence').persistence
+var config = require("./config");
+var persistence      = require('persistencejs/lib/persistence').persistence
     , persistenceStore = require("persistencejs/lib/persistence.store.mysql")
 
 var LIMIT = 10000
 
 persistence.debug = false
-persistenceStore.config(persistence, 'localhost', 3306, 'performance_analysis_sequelize', 'root', null)
+persistenceStore.config(persistence, 'localhost', 3306, config.database, config.user, null)
 
 var session = persistenceStore.getSession()
   , Entry   = persistence.define('EntryPersistence', {
